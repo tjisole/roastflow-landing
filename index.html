@@ -551,6 +551,7 @@ footer a{color:var(--amber);text-decoration:none}
           <span style="font-size:13px;color:rgba(250,246,240,0.4)">/month</span>
         </div>
         <div style="font-size:12px;color:rgba(200,147,42,0.9);margin-top:4px;font-weight:600">Beta: 6 months free</div>
+        <div style="font-size:11px;color:rgba(250,246,240,0.45);margin-top:2px">Waitlist: 20% off first year</div>
       </div>
       <div style="padding:20px 28px">
         <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,246,240,0.35);margin-bottom:4px">Standard Plus</div>
@@ -581,8 +582,25 @@ footer a{color:var(--amber);text-decoration:none}
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
+}, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// If page loads with a hash, reveal all elements in that section immediately
+function revealSection(id) {
+  const sec = document.getElementById(id);
+  if (!sec) return;
+  sec.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+}
+if (window.location.hash) {
+  setTimeout(() => revealSection(window.location.hash.slice(1)), 100);
+}
+// Also handle anchor clicks
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', () => {
+    const id = a.getAttribute('href').slice(1);
+    setTimeout(() => revealSection(id), 300);
+  });
+});
 
 // Animate timer counter
 let seconds = 522;
@@ -605,14 +623,14 @@ setInterval(() => {
       <span class="section-tag">Plans</span>
       <h2 class="section-title">Simple, transparent<br><em>pricing.</em></h2>
       <p class="section-body" style="margin:0 auto;text-align:center">
-        Beta customers get 6 months free — no credit card required. Lock in your rate before we launch publicly.
+        Beta runs until April 30th. Accepted beta customers get 6 months free. Waitlist members who aren't selected for beta get 20% off their first year at launch.
       </p>
     </div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto" class="pricing-grid">
 
       <!-- Standard -->
-      <div class="reveal reveal-delay-1" style="
+      <div style="
         background:linear-gradient(145deg,rgba(200,147,42,0.1),rgba(200,147,42,0.03));
         border:1px solid rgba(200,147,42,0.4);border-radius:24px;padding:36px;position:relative;
       ">
@@ -628,7 +646,14 @@ setInterval(() => {
           <span style="font-size:48px;font-weight:900;font-family:'DM Mono',monospace;color:var(--amber)">$60</span>
           <span style="color:rgba(250,246,240,0.4);font-size:16px">/month</span>
         </div>
-        <div style="font-size:13px;color:rgba(250,246,240,0.4);margin-bottom:28px">after beta period</div>
+        <div style="font-size:13px;color:rgba(250,246,240,0.4);margin-bottom:12px">after 6-month free period</div>
+        <div style="
+          background:rgba(200,147,42,0.12);border:1px solid rgba(200,147,42,0.35);
+          border-radius:10px;padding:10px 14px;margin-bottom:20px;
+        ">
+          <span style="font-size:13px;color:var(--amber);font-weight:700">🎉 Waitlist perk:</span>
+          <span style="font-size:13px;color:rgba(250,246,240,0.75)"> Accepted beta customers get 6 months free. On the waitlist? You'll get 20% off your first year.</span>
+        </div>
 
         <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
           <div style="display:flex;gap:10px;align-items:flex-start">
@@ -663,7 +688,7 @@ setInterval(() => {
       </div>
 
       <!-- Standard Plus -->
-      <div class="reveal reveal-delay-2" style="
+      <div style="
         background:rgba(255,255,255,0.02);
         border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:36px;position:relative;
         opacity:0.85;
