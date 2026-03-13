@@ -569,5 +569,381 @@ setInterval(() => {
   if (el) el.innerHTML = `${m}<span class="colon">:</span>${s}`;
 }, 1000);
 </script>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- PRICING SECTION -->
+<!-- ══════════════════════════════════════════════ -->
+<hr class="divider">
+<section id="pricing" style="padding:100px 24px">
+  <div class="section-inner" style="max-width:1100px;margin:0 auto">
+    <div style="text-align:center;max-width:640px;margin:0 auto 60px" class="reveal">
+      <span class="section-tag">Plans</span>
+      <h2 class="section-title">Simple, transparent<br><em>pricing.</em></h2>
+      <p class="section-body" style="margin:0 auto;text-align:center">
+        Beta customers get 6 months free — no credit card required. Lock in your rate before we launch publicly.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto" class="pricing-grid">
+
+      <!-- Standard -->
+      <div class="reveal reveal-delay-1" style="
+        background:linear-gradient(145deg,rgba(200,147,42,0.1),rgba(200,147,42,0.03));
+        border:1px solid rgba(200,147,42,0.4);border-radius:24px;padding:36px;position:relative;
+      ">
+        <div style="
+          position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+          background:var(--amber);color:var(--espresso);
+          font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;
+          padding:5px 18px;border-radius:100px;white-space:nowrap;
+        ">Beta — 6 Months Free</div>
+
+        <div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--cream);margin-bottom:6px">Standard</div>
+        <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:6px">
+          <span style="font-size:48px;font-weight:900;font-family:'DM Mono',monospace;color:var(--amber)">$60</span>
+          <span style="color:rgba(250,246,240,0.4);font-size:16px">/month</span>
+        </div>
+        <div style="font-size:13px;color:rgba(250,246,240,0.4);margin-bottom:28px">after beta period</div>
+
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.75)">Live roast timer with milestone alarms</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.75)">Voice prompts & bean observation logging</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.75)">Green inventory & invoice management</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.75)">Pricing tool with overhead & labor tracking</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.75)">Works on mobile, tablet & desktop</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.75)">Training & expert modes</span>
+          </div>
+        </div>
+
+        <a href="#waitlist" class="btn-primary" style="width:100%;text-align:center;justify-content:center;display:flex">
+          Join Beta — Free for 6 Months
+        </a>
+      </div>
+
+      <!-- Standard Plus -->
+      <div class="reveal reveal-delay-2" style="
+        background:rgba(255,255,255,0.02);
+        border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:36px;position:relative;
+        opacity:0.85;
+      ">
+        <div style="
+          position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+          background:rgba(255,255,255,0.1);color:rgba(250,246,240,0.6);
+          font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;
+          padding:5px 18px;border-radius:100px;white-space:nowrap;border:1px solid rgba(255,255,255,0.15);
+        ">In Development</div>
+
+        <div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--cream);margin-bottom:6px">Standard <em style="color:var(--amber)">Plus</em></div>
+        <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:6px">
+          <span style="font-size:48px;font-weight:900;font-family:'DM Mono',monospace;color:rgba(250,246,240,0.35)">TBD</span>
+        </div>
+        <div style="font-size:13px;color:rgba(250,246,240,0.3);margin-bottom:28px">pricing announced at launch</div>
+
+        <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.4)">Everything in Standard</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.4)">Automatic bean temp tracing from equipment</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.4)">Automatic air temp tracing from equipment</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.4)">Direct equipment integration</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start">
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
+            <span style="font-size:14px;color:rgba(250,246,240,0.4)">Advanced roast curve analytics</span>
+          </div>
+        </div>
+
+        <div style="
+          background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+          border-radius:10px;padding:14px;text-align:center;
+          font-size:13px;color:rgba(250,246,240,0.4);
+        ">
+          🔧 Coming soon — beta customers notified first
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- WAITLIST + QUESTIONNAIRE SECTION -->
+<!-- ══════════════════════════════════════════════ -->
+<hr class="divider">
+<section id="waitlist" style="padding:100px 24px;background:linear-gradient(180deg,transparent,rgba(200,147,42,0.04),transparent)">
+  <div style="max-width:640px;margin:0 auto">
+
+    <div style="text-align:center;margin-bottom:52px" class="reveal">
+      <span class="section-tag">Beta Access</span>
+      <h2 class="section-title">Request <em>early access.</em></h2>
+      <p class="section-body" style="margin:0 auto;text-align:center">
+        We're onboarding a limited number of beta roasters. Tell us about your operation and we'll be in touch.
+      </p>
+    </div>
+
+    <!-- QUESTIONNAIRE -->
+    <div id="quiz-container" class="reveal reveal-delay-1" style="
+      background:linear-gradient(145deg,#2A1A0E,#1A0C06);
+      border:1px solid rgba(200,147,42,0.25);border-radius:24px;padding:36px;
+    ">
+      <!-- Progress bar -->
+      <div style="margin-bottom:28px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <span id="q-step-label" style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber)">Question 1 of 8</span>
+          <span id="q-pct" style="font-size:11px;color:rgba(250,246,240,0.35)">0% complete</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.08);border-radius:100px;height:4px">
+          <div id="q-progress" style="background:var(--amber);height:4px;border-radius:100px;width:0%;transition:width 0.4s ease"></div>
+        </div>
+      </div>
+
+      <!-- Question display -->
+      <div id="q-body">
+        <div id="q-text" style="font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:8px;line-height:1.3"></div>
+        <div id="q-hint" style="font-size:13px;color:rgba(250,246,240,0.4);margin-bottom:24px"></div>
+        <div id="q-options" style="display:flex;flex-direction:column;gap:10px"></div>
+        <div id="q-input-wrap" style="display:none;margin-top:8px">
+          <input id="q-input" type="text" style="
+            width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(200,147,42,0.3);
+            border-radius:10px;padding:14px 16px;color:var(--cream);font-size:16px;font-family:'DM Sans',sans-serif;
+            outline:none;
+          " placeholder="" />
+          <button onclick="submitInput()" style="
+            margin-top:12px;background:var(--amber);color:var(--espresso);
+            border:none;border-radius:10px;padding:13px 28px;font-weight:700;font-size:15px;
+            cursor:pointer;width:100%;
+          ">Continue →</button>
+        </div>
+      </div>
+
+      <!-- Final form (shown after all questions) -->
+      <div id="q-final" style="display:none">
+        <div style="font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:8px">Almost done.</div>
+        <div style="font-size:14px;color:rgba(250,246,240,0.5);margin-bottom:24px">Leave your name and email and we'll reach out about beta access.</div>
+        <input id="f-name" type="text" placeholder="Your name" style="
+          width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(200,147,42,0.3);
+          border-radius:10px;padding:14px 16px;color:var(--cream);font-size:15px;font-family:'DM Sans',sans-serif;
+          outline:none;margin-bottom:12px;box-sizing:border-box;
+        " />
+        <input id="f-email" type="email" placeholder="Your email address" style="
+          width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(200,147,42,0.3);
+          border-radius:10px;padding:14px 16px;color:var(--cream);font-size:15px;font-family:'DM Sans',sans-serif;
+          outline:none;margin-bottom:20px;box-sizing:border-box;
+        " />
+        <button onclick="submitFinal()" style="
+          width:100%;background:var(--amber);color:var(--espresso);
+          border:none;border-radius:10px;padding:16px;font-weight:700;font-size:16px;
+          cursor:pointer;
+        ">🔥 Request Beta Access</button>
+      </div>
+
+      <!-- Thank you -->
+      <div id="q-thanks" style="display:none;text-align:center;padding:20px 0">
+        <div style="font-size:48px;margin-bottom:16px">🔥</div>
+        <div style="font-family:'Playfair Display',serif;font-size:28px;color:var(--cream);margin-bottom:12px">You're on the list.</div>
+        <div style="font-size:15px;color:rgba(250,246,240,0.5);line-height:1.65">
+          Thanks for applying for beta access. We'll review your answers and reach out personally.<br><br>
+          Beta roasters get <strong style="color:var(--amber)">6 months free</strong> — no credit card needed.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+@media(max-width:700px){
+  .pricing-grid{grid-template-columns:1fr !important}
+}
+.q-option{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);
+  border-radius:12px;padding:14px 18px;cursor:pointer;
+  font-size:15px;color:rgba(250,246,240,0.8);text-align:left;
+  transition:all 0.2s;font-family:'DM Sans',sans-serif;
+}
+.q-option:hover{background:rgba(200,147,42,0.12);border-color:var(--amber);color:var(--cream)}
+.q-option.selected{background:rgba(200,147,42,0.18);border-color:var(--amber);color:var(--amber);font-weight:600}
+</style>
+
+<script>
+const QUESTIONS = [
+  {
+    q: "What best describes your roasting setup?",
+    hint: "This helps us understand where you're starting from.",
+    type: "choice",
+    options: ["Sample roaster (under 1kg)", "Small production (1–15kg)", "Mid production (15–60kg)", "Large production (60kg+)"]
+  },
+  {
+    q: "How many pounds of coffee do you roast annually?",
+    hint: "Rough estimate is fine.",
+    type: "choice",
+    options: ["Under 5,000 lbs", "5,000–25,000 lbs", "25,000–100,000 lbs", "Over 100,000 lbs"]
+  },
+  {
+    q: "How do you roast today?",
+    hint: "We want to meet you where you are.",
+    type: "choice",
+    options: ["Fully manual — by eye, ear, smell", "Manual with a timer or notepad", "Semi-automated with software", "Fully automated profiles"]
+  },
+  {
+    q: "Are you currently using any roast tracking tool?",
+    hint: "Spreadsheets count too.",
+    type: "choice",
+    options: ["Paper logs or nothing", "Spreadsheets", "Roast tracking software", "Built our own system"]
+  },
+  {
+    q: "How often do you cup against your coffee?",
+    hint: "Cupping is how roasters evaluate what ended up in the bag.",
+    type: "choice",
+    options: ["Every batch", "Weekly", "Monthly or less", "Rarely or never"]
+  },
+  {
+    q: "Do you do any green coffee grading before roasting?",
+    hint: "Moisture, screen size, defect sorting — that kind of thing.",
+    type: "choice",
+    options: ["Yes — full grading process", "Partial — some checks", "We rely on our broker's grading", "No green grading currently"]
+  },
+  {
+    q: "How many people are involved in your roasting operation?",
+    hint: "Helps us understand your team size.",
+    type: "choice",
+    options: ["Just me", "2–3 people", "4–10 people", "10+ people"]
+  },
+  {
+    q: "What's your biggest pain point right now?",
+    hint: "Be honest — this helps us build the right tool.",
+    type: "input",
+    placeholder: "e.g. consistency between batches, training new staff, tracking costs..."
+  }
+];
+
+let current = 0;
+let answers = {};
+
+function renderQuestion(idx) {
+  const q = QUESTIONS[idx];
+  const pct = Math.round((idx / QUESTIONS.length) * 100);
+  document.getElementById('q-step-label').textContent = `Question ${idx+1} of ${QUESTIONS.length}`;
+  document.getElementById('q-pct').textContent = `${pct}% complete`;
+  document.getElementById('q-progress').style.width = pct + '%';
+
+  // Animate in
+  const body = document.getElementById('q-body');
+  body.style.opacity = '0';
+  body.style.transform = 'translateY(12px)';
+  setTimeout(() => {
+    document.getElementById('q-text').textContent = q.q;
+    document.getElementById('q-hint').textContent = q.hint || '';
+
+    const optWrap = document.getElementById('q-options');
+    const inputWrap = document.getElementById('q-input-wrap');
+    optWrap.innerHTML = '';
+    inputWrap.style.display = 'none';
+
+    if (q.type === 'choice') {
+      q.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.className = 'q-option';
+        btn.textContent = opt;
+        btn.onclick = () => selectOption(btn, opt);
+        optWrap.appendChild(btn);
+      });
+    } else {
+      inputWrap.style.display = 'block';
+      const input = document.getElementById('q-input');
+      input.placeholder = q.placeholder || '';
+      input.value = '';
+      setTimeout(() => input.focus(), 300);
+    }
+
+    body.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    body.style.opacity = '1';
+    body.style.transform = 'translateY(0)';
+  }, 150);
+}
+
+function selectOption(btn, value) {
+  document.querySelectorAll('.q-option').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  answers[current] = value;
+  setTimeout(() => nextQuestion(), 400);
+}
+
+function submitInput() {
+  const val = document.getElementById('q-input').value.trim();
+  if (!val) return;
+  answers[current] = val;
+  nextQuestion();
+}
+
+function nextQuestion() {
+  current++;
+  if (current >= QUESTIONS.length) {
+    showFinal();
+  } else {
+    renderQuestion(current);
+  }
+}
+
+function showFinal() {
+  document.getElementById('q-step-label').textContent = 'Almost there';
+  document.getElementById('q-pct').textContent = '100% complete';
+  document.getElementById('q-progress').style.width = '100%';
+  document.getElementById('q-body').style.display = 'none';
+  document.getElementById('q-final').style.display = 'block';
+}
+
+function submitFinal() {
+  const name  = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  if (!name || !email) { alert('Please enter your name and email.'); return; }
+
+  // Store locally for now
+  const entry = { name, email, answers, ts: new Date().toISOString() };
+  const existing = JSON.parse(localStorage.getItem('rf_waitlist') || '[]');
+  existing.push(entry);
+  localStorage.setItem('rf_waitlist', JSON.stringify(existing));
+
+  document.getElementById('q-final').style.display = 'none';
+  document.getElementById('q-thanks').style.display = 'block';
+}
+
+// Start
+renderQuestion(0);
+
+// Keyboard support for input
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && document.getElementById('q-input-wrap').style.display !== 'none') {
+    submitInput();
+  }
+});
+</script>
+
 </body>
 </html>
