@@ -804,6 +804,11 @@ setInterval(() => {
         <input id="f-email" type="email" placeholder="Your email address" style="
           width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(200,147,42,0.3);
           border-radius:10px;padding:14px 16px;color:var(--cream);font-size:15px;font-family:'DM Sans',sans-serif;
+          outline:none;margin-bottom:12px;box-sizing:border-box;
+        " />
+        <input id="f-phone" type="tel" placeholder="Phone number (optional)" style="
+          width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(200,147,42,0.3);
+          border-radius:10px;padding:14px 16px;color:var(--cream);font-size:15px;font-family:'DM Sans',sans-serif;
           outline:none;margin-bottom:20px;box-sizing:border-box;
         " />
         <button onclick="submitFinal()" style="
@@ -890,6 +895,12 @@ const QUESTIONS = [
     hint: "Be honest — this helps us build the right tool.",
     type: "input",
     placeholder: "e.g. consistency between batches, training new staff, tracking costs..."
+  },
+  {
+    q: "How would you prefer we reach out?",
+    hint: "We'll use this when we contact you about your application.",
+    type: "choice",
+    options: ["Email", "Phone call", "Text message", "No preference"]
   }
 ];
 
@@ -972,10 +983,11 @@ function showFinal() {
 function submitFinal() {
   const name  = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
   if (!name || !email) { alert('Please enter your name and email.'); return; }
 
   // Store locally for now
-  const entry = { name, email, answers, ts: new Date().toISOString() };
+  const entry = { name, email, phone, answers, ts: new Date().toISOString() };
   const existing = JSON.parse(localStorage.getItem('rf_waitlist') || '[]');
   existing.push(entry);
   localStorage.setItem('rf_waitlist', JSON.stringify(existing));
