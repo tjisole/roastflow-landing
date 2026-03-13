@@ -990,10 +990,6 @@ async function submitFinal() {
   btn.textContent = 'Submitting...';
   btn.disabled = true;
 
-  const AIRTABLE_TOKEN = 'YOUR_AIRTABLE_TOKEN_HERE';
-  const BASE_ID = 'appIskTBssIfOOGMd';
-  const TABLE = 'Applicants';
-
   const fields = {
     'Name': name,
     'Email': email,
@@ -1012,13 +1008,10 @@ async function submitFinal() {
   };
 
   try {
-    const res = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(TABLE)}`, {
+    const res = await fetch('/api/submit', {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ fields })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ table: 'Applicants', fields })
     });
 
     if (!res.ok) throw new Error('Failed');
