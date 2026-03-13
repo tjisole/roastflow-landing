@@ -980,20 +980,56 @@ function showFinal() {
   document.getElementById('q-final').style.display = 'block';
 }
 
-function submitFinal() {
+async function submitFinal() {
   const name  = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
   if (!name || !email) { alert('Please enter your name and email.'); return; }
 
-  // Store locally for now
-  const entry = { name, email, phone, answers, ts: new Date().toISOString() };
-  const existing = JSON.parse(localStorage.getItem('rf_waitlist') || '[]');
-  existing.push(entry);
-  localStorage.setItem('rf_waitlist', JSON.stringify(existing));
+  const btn = document.querySelector('#q-final button');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
 
-  document.getElementById('q-final').style.display = 'none';
-  document.getElementById('q-thanks').style.display = 'block';
+  const AIRTABLE_TOKEN = 'patQ9SoiZn4wotp7a.7a12e3fee353d397e9e393f3fce66472edcefc66323ddc4e620920112cd59c17';
+  const BASE_ID = 'appIskTBssIfOOGMd';
+  const TABLE = 'Applicants';
+
+  const fields = {
+    'Name': name,
+    'Email': email,
+    'Phone': phone,
+    'Status': 'Applied',
+    'Roaster Size':       answers[0] || '',
+    'Annual Volume':      answers[1] || '',
+    'Roast Method':       answers[2] || '',
+    'Current Tool':       answers[3] || '',
+    'Cupping Frequency':  answers[4] || '',
+    'Green Grading':      answers[5] || '',
+    'Team Size':          answers[6] || '',
+    'Pain Point':         answers[7] || '',
+    'Preferred Contact':  answers[8] || '',
+    'Submitted At':       new Date().toISOString().split('T')[0]
+  };
+
+  try {
+    const res = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(TABLE)}`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ fields })
+    });
+
+    if (!res.ok) throw new Error('Failed');
+
+    document.getElementById('q-final').style.display = 'none';
+    document.getElementById('q-thanks').style.display = 'block';
+  } catch(e) {
+    btn.textContent = '🔥 Submit Application';
+    btn.disabled = false;
+    alert('Something went wrong. Please try again.');
+  }
 }
 
 // Start
