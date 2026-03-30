@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RoastFlow â€” Roast Smarter. Every Batch.</title>
+<title>RoastFlow — Roast Smarter. Every Batch.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -23,14 +23,14 @@
 html{scroll-behavior:smooth}
 body{background:var(--espresso);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}
 
-/* â”€â”€ NOISE TEXTURE â”€â”€ */
+/* ── NOISE TEXTURE ── */
 body::before{
   content:'';position:fixed;inset:0;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   pointer-events:none;z-index:999;opacity:0.5
 }
 
-/* â”€â”€ NAV â”€â”€ */
+/* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
@@ -51,7 +51,7 @@ nav a.nav-cta:hover{background:var(--amber-light);transform:translateY(-1px)}
 
 @keyframes flicker{0%,100%{opacity:1}50%{opacity:0.7}75%{opacity:0.9}}
 
-/* â”€â”€ HERO â”€â”€ */
+/* ── HERO ── */
 .hero{
   min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:120px 24px 80px;text-align:center;position:relative;overflow:hidden;
@@ -104,7 +104,7 @@ nav a.nav-cta:hover{background:var(--amber-light);transform:translateY(-1px)}
 
 @keyframes fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
-/* â”€â”€ TIMER MOCKUP â”€â”€ */
+/* ── TIMER MOCKUP ── */
 .hero-mockup{
   margin-top:64px;width:100%;max-width:420px;
   animation:fade-up 1s 0.5s ease both;
@@ -141,7 +141,7 @@ nav a.nav-cta:hover{background:var(--amber-light);transform:translateY(-1px)}
 @keyframes banner-pulse{0%,100%{opacity:1}50%{opacity:0.7}}
 .mockup-banner-text{font-size:13px;font-weight:600;color:var(--amber)}
 
-/* â”€â”€ SECTION SHARED â”€â”€ */
+/* ── SECTION SHARED ── */
 section{padding:72px 24px}
 .section-inner{max-width:1100px;margin:0 auto}
 .section-tag{
@@ -155,10 +155,10 @@ section{padding:72px 24px}
 .section-title em{color:var(--amber);font-style:italic}
 .section-body{font-size:18px;line-height:1.75;color:rgba(250,246,240,0.6);max-width:600px;font-weight:300}
 
-/* â”€â”€ DIVIDER LINE â”€â”€ */
+/* ── DIVIDER LINE ── */
 .divider{border:none;border-top:1px solid rgba(200,147,42,0.15);margin:0}
 
-/* â”€â”€ FEATURE: ROAST GUIDANCE â”€â”€ */
+/* ── FEATURE: ROAST GUIDANCE ── */
 .guidance-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:64px}
 @media(max-width:768px){.guidance-grid{grid-template-columns:1fr;gap:40px}}
 
@@ -210,7 +210,7 @@ section{padding:72px 24px}
 .feature-text-title{font-size:15px;font-weight:600;color:var(--cream);margin-bottom:3px}
 .feature-text-body{font-size:14px;color:rgba(250,246,240,0.5);line-height:1.5}
 
-/* â”€â”€ MODES SECTION â”€â”€ */
+/* ── MODES SECTION ── */
 .modes-section{background:linear-gradient(180deg,transparent,rgba(200,147,42,0.04),transparent)}
 .modes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
 @media(max-width:600px){.modes-grid{grid-template-columns:1fr}}
@@ -238,9 +238,9 @@ section{padding:72px 24px}
 .mode-desc{font-size:15px;line-height:1.65;color:rgba(250,246,240,0.55);font-weight:300}
 .mode-items{margin-top:20px;display:flex;flex-direction:column;gap:8px}
 .mode-item{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(250,246,240,0.65)}
-.mode-item::before{content:'â†’';color:var(--amber);font-weight:700;flex-shrink:0}
+.mode-item::before{content:'→';color:var(--amber);font-weight:700;flex-shrink:0}
 
-/* â”€â”€ OPERATIONS SECTION â”€â”€ */
+/* ── OPERATIONS SECTION ── */
 .ops-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
 @media(max-width:800px){.ops-grid{grid-template-columns:1fr}}
 .ops-card{
@@ -252,7 +252,7 @@ section{padding:72px 24px}
 .ops-title{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:10px}
 .ops-body{font-size:14px;line-height:1.65;color:rgba(250,246,240,0.5)}
 
-/* â”€â”€ QUOTE SECTION â”€â”€ */
+/* ── QUOTE SECTION ── */
 .quote-section{text-align:center;padding:60px 24px}
 .quote-mark{font-family:'Playfair Display',serif;font-size:120px;line-height:0.6;color:rgba(200,147,42,0.2);display:block;margin-bottom:8px}
 .quote-text{
@@ -262,7 +262,7 @@ section{padding:72px 24px}
 }
 .quote-text em{color:var(--amber);font-style:normal}
 
-/* â”€â”€ CTA SECTION â”€â”€ */
+/* ── CTA SECTION ── */
 .cta-section{
   text-align:center;padding:72px 24px;
   background:linear-gradient(180deg,transparent,rgba(200,147,42,0.06));
@@ -275,7 +275,7 @@ section{padding:72px 24px}
 .cta-sub{font-size:18px;color:rgba(250,246,240,0.55);margin-bottom:44px;font-weight:300}
 .cta-note{margin-top:18px;font-size:13px;color:rgba(250,246,240,0.3)}
 
-/* â”€â”€ FOOTER â”€â”€ */
+/* ── FOOTER ── */
 footer{
   border-top:1px solid rgba(255,255,255,0.07);
   padding:32px 48px;display:flex;align-items:center;justify-content:space-between;
@@ -284,7 +284,7 @@ footer{
 }
 footer a{color:var(--amber);text-decoration:none}
 
-/* â”€â”€ SCROLL REVEAL â”€â”€ */
+/* ── SCROLL REVEAL ── */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-delay-1{transition-delay:0.1s}
@@ -311,49 +311,49 @@ footer a{color:var(--amber);text-decoration:none}
   <div class="hero-glow"></div>
 
   <div class="hero-eyebrow">
-    ðŸ­ Built for production &amp; sample roasters
+    🏭 Built for production &amp; sample roasters
   </div>
 
   <h1>Roast <em>Smarter.</em><br>Every Batch.</h1>
 
   <p class="hero-sub">
-    Real-time roast guidance, voice prompts, bean observation logging, inventory management, and accurate pricing â€” all in one flow that doesn't get in your way.
+    Real-time roast guidance, voice prompts, bean observation logging, inventory management, and accurate pricing — all in one flow that doesn't get in your way.
   </p>
 
   <div class="hero-cta-row">
     <a class="btn-primary" href="https://www.roast-flow.app">
-      ðŸ”¥ Start Roasting Free
+      🔥 Start Roasting Free
     </a>
-    <a class="btn-ghost" href="#waitlist">Apply for Beta â†’</a>
+    <a class="btn-ghost" href="#waitlist">Apply for Beta →</a>
   </div>
 
   <!-- Timer Mockup -->
   <div class="hero-mockup">
     <div class="mockup-card">
       <div class="mockup-label">Roasting Now</div>
-      <div class="mockup-coffee-name">Ethiopia Yirgacheffe â€” Natural</div>
+      <div class="mockup-coffee-name">Ethiopia Yirgacheffe — Natural</div>
       <div class="mockup-timer">08<span class="colon">:</span>42</div>
       <div class="mockup-started">Started 9:14:20 AM</div>
       <div class="mockup-chips">
         <div class="chip hit">
-          <div class="chip-icon">ðŸ’¥</div>
+          <div class="chip-icon">💥</div>
           <div class="chip-label">1st Crack</div>
-          <div class="chip-time">âœ“</div>
+          <div class="chip-time">✓</div>
         </div>
         <div class="chip warn">
-          <div class="chip-icon">â±</div>
+          <div class="chip-icon">⏱</div>
           <div class="chip-label">Dev Time</div>
           <div class="chip-time">00:18</div>
         </div>
         <div class="chip">
-          <div class="chip-icon">ðŸ</div>
+          <div class="chip-icon">🏁</div>
           <div class="chip-label">Drop</div>
           <div class="chip-time">01:18</div>
         </div>
       </div>
       <div class="mockup-banner">
-        <span style="font-size:18px">ðŸ”Š</span>
-        <span class="mockup-banner-text">Dev time approaching â€” prepare to drop</span>
+        <span style="font-size:18px">🔊</span>
+        <span class="mockup-banner-text">Dev time approaching — prepare to drop</span>
       </div>
     </div>
   </div>
@@ -370,41 +370,41 @@ footer a{color:var(--amber);text-decoration:none}
       <div class="reveal">
         <div class="obs-mockup">
           <div class="obs-panel-title">
-            â˜• Bean Observations
+            ☕ Bean Observations
           </div>
 
           <div class="obs-btn active-amber">
-            <span class="obs-btn-emoji">ðŸ”„</span>
+            <span class="obs-btn-emoji">🔄</span>
             <span class="obs-btn-label">Turning Point</span>
             <span class="obs-stamp">02:14</span>
           </div>
           <div class="obs-btn active-amber">
-            <span class="obs-btn-emoji">ðŸ’¨</span>
+            <span class="obs-btn-emoji">💨</span>
             <span class="obs-btn-label">Drying Phase</span>
             <span class="obs-stamp">04:30</span>
           </div>
           <div class="obs-btn active-amber">
-            <span class="obs-btn-emoji">ðŸŸ¡</span>
+            <span class="obs-btn-emoji">🟡</span>
             <span class="obs-btn-label">Yellowing</span>
             <span class="obs-stamp">06:10</span>
           </div>
           <div class="obs-btn active-sage">
-            <span class="obs-btn-emoji">ðŸ’¥</span>
+            <span class="obs-btn-emoji">💥</span>
             <span class="obs-btn-label">1st Crack</span>
             <span class="obs-stamp">08:22</span>
           </div>
           <div class="obs-btn default">
-            <span class="obs-btn-emoji">ðŸ”¥</span>
+            <span class="obs-btn-emoji">🔥</span>
             <span class="obs-btn-label">2nd Crack</span>
           </div>
           <div class="obs-btn active-red">
-            <span class="obs-btn-emoji">ðŸ</span>
+            <span class="obs-btn-emoji">🏁</span>
             <span class="obs-btn-label">Drop</span>
             <span class="obs-stamp">10:05</span>
           </div>
 
           <div class="voice-banner">
-            <div class="voice-banner-text">ðŸ”Š "First crack â€” time to focus"</div>
+            <div class="voice-banner-text">🔊 "First crack — time to focus"</div>
             <div class="voice-banner-sub">Voice prompt fired at target time</div>
           </div>
         </div>
@@ -415,29 +415,29 @@ footer a{color:var(--amber);text-decoration:none}
         <span class="section-tag">Roast Guidance</span>
         <h2 class="section-title">Every stage.<br><em>On time.</em> Every time.</h2>
         <p class="section-body">
-          Set your target milestones before you charge. RoastFlow tracks every second and fires audible alarms â€” with voice announcements â€” exactly when you need them. Tap to log observations as they happen.
+          Set your target milestones before you charge. RoastFlow tracks every second and fires audible alarms — with voice announcements — exactly when you need them. Tap to log observations as they happen.
         </p>
 
         <ul class="feature-list">
           <li>
-            <div class="feature-icon">ðŸ”Š</div>
+            <div class="feature-icon">🔊</div>
             <div>
               <div class="feature-text-title">Voice Prompts</div>
-              <div class="feature-text-body">Spoken alerts like "First crack approaching â€” prepare to note" let you stay eyes-on-drum, not screen.</div>
+              <div class="feature-text-body">Spoken alerts like "First crack approaching — prepare to note" let you stay eyes-on-drum, not screen.</div>
             </div>
           </li>
           <li>
-            <div class="feature-icon">ðŸ’¥</div>
+            <div class="feature-icon">💥</div>
             <div>
               <div class="feature-text-title">One-Tap Bean Logging</div>
-              <div class="feature-text-body">Turning point, yellowing, first crack, drop â€” timestamped instantly with temp logging at each event.</div>
+              <div class="feature-text-body">Turning point, yellowing, first crack, drop — timestamped instantly with temp logging at each event.</div>
             </div>
           </li>
           <li>
-            <div class="feature-icon">â±</div>
+            <div class="feature-icon">⏱</div>
             <div>
               <div class="feature-text-title">Tolerance Alerts</div>
-              <div class="feature-text-body">When you log an event, RoastFlow tells you if you hit the target â€” or how many seconds early or late.</div>
+              <div class="feature-text-body">When you log an event, RoastFlow tells you if you hit the target — or how many seconds early or late.</div>
             </div>
           </li>
         </ul>
@@ -456,13 +456,13 @@ footer a{color:var(--amber);text-decoration:none}
       <span class="section-tag">Two modes. One tool.</span>
       <h2 class="section-title" style="text-align:center">Built for <em>every</em> roaster<br>on your floor</h2>
       <p class="section-body" style="margin:0 auto;text-align:center">
-        Whether you're onboarding a new roaster or running a solo production session with 10 years behind you â€” RoastFlow adapts to how you work.
+        Whether you're onboarding a new roaster or running a solo production session with 10 years behind you — RoastFlow adapts to how you work.
       </p>
     </div>
 
     <div class="modes-grid">
       <div class="mode-card training reveal reveal-delay-1">
-        <div class="mode-badge">ðŸŽ“ Training Mode</div>
+        <div class="mode-badge">🎓 Training Mode</div>
         <div class="mode-title">Guide your team through every roast</div>
         <div class="mode-desc">New roasters get spoken cues and visual prompts at each milestone. Nothing slips through. Confidence builds fast.</div>
         <div class="mode-items">
@@ -474,7 +474,7 @@ footer a{color:var(--amber);text-decoration:none}
       </div>
 
       <div class="mode-card expert reveal reveal-delay-2">
-        <div class="mode-badge">ðŸ† Expert Mode</div>
+        <div class="mode-badge">🏆 Expert Mode</div>
         <div class="mode-title">Stay in the flow without distraction</div>
         <div class="mode-desc">Disable voice, disable banners, or run fully silent. Just the timer, your observations, and the data you want.</div>
         <div class="mode-items">
@@ -503,19 +503,19 @@ footer a{color:var(--amber);text-decoration:none}
 
     <div class="ops-grid">
       <div class="ops-card reveal reveal-delay-1">
-        <div class="ops-icon">ðŸ“¦</div>
+        <div class="ops-icon">📦</div>
         <div class="ops-title">Live Inventory</div>
-        <div class="ops-body">Every roast automatically deducts from your green coffee stock. Your inventory is always accurate â€” no manual counting, no guessing.</div>
+        <div class="ops-body">Every roast automatically deducts from your green coffee stock. Your inventory is always accurate — no manual counting, no guessing.</div>
       </div>
 
       <div class="ops-card reveal reveal-delay-2">
-        <div class="ops-icon">ðŸ“„</div>
+        <div class="ops-icon">📄</div>
         <div class="ops-title">Invoice Import</div>
         <div class="ops-body">Import invoices from multiple brokers in one step. Green coffee lands in your inventory immediately, costs tracked per origin.</div>
       </div>
 
       <div class="ops-card reveal reveal-delay-3">
-        <div class="ops-icon">ðŸ’°</div>
+        <div class="ops-icon">💰</div>
         <div class="ops-title">Accurate Pricing</div>
         <div class="ops-body">As overhead, labor, and green costs shift, RoastFlow recalculates your pricing so you're never selling at yesterday's margin.</div>
       </div>
@@ -537,7 +537,7 @@ footer a{color:var(--amber);text-decoration:none}
 <section class="cta-section">
   <div class="section-inner">
     <h2 class="reveal">Your best roast<br>is the <em>next</em> one.</h2>
-    <p class="cta-sub reveal reveal-delay-1">Works in your browser â€” mobile, tablet, or desktop.</p>
+    <p class="cta-sub reveal reveal-delay-1">Works in your browser — mobile, tablet, or desktop.</p>
 
     <!-- Pricing summary strip -->
     <div class="reveal reveal-delay-1" style="
@@ -562,7 +562,7 @@ footer a{color:var(--amber);text-decoration:none}
 
     <div class="reveal reveal-delay-2">
       <a href="#waitlist" class="btn-primary" style="font-size:18px;padding:18px 48px">
-        ðŸ”¥ Apply for Beta Access
+        🔥 Apply for Beta Access
       </a>
     </div>
     <p class="cta-note reveal reveal-delay-3">roast-flow.com</p>
@@ -573,7 +573,7 @@ footer a{color:var(--amber);text-decoration:none}
 <footer>
   <span style="display:flex;align-items:center;gap:12px">
     <img src="logo.png" alt="RoastFlow" style="height:48px;width:auto;" />
-    <span style="color:rgba(250,246,240,0.5)">â€” Roast Smarter. Every Batch.</span>
+    <span style="color:rgba(250,246,240,0.5)">— Roast Smarter. Every Batch.</span>
   </span>
   <span><a href="https://www.roast-flow.app">roast-flow.app</a></span>
 </footer>
@@ -613,9 +613,9 @@ setInterval(() => {
 }, 1000);
 </script>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════════════════════════════════════════ -->
 <!-- PRICING SECTION -->
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════════════════════════════════════════ -->
 <hr class="divider">
 <section id="pricing" style="padding:72px 24px">
   <div class="section-inner" style="max-width:1100px;margin:0 auto">
@@ -639,7 +639,7 @@ setInterval(() => {
           background:var(--amber);color:var(--espresso);
           font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;
           padding:5px 18px;border-radius:100px;white-space:nowrap;
-        ">Beta â€” 6 Months Free</div>
+        ">Beta — 6 Months Free</div>
 
         <div style="font-family:'Playfair Display',serif;font-size:24px;color:var(--cream);margin-bottom:6px">Standard</div>
         <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:6px">
@@ -651,33 +651,33 @@ setInterval(() => {
           background:rgba(200,147,42,0.12);border:1px solid rgba(200,147,42,0.35);
           border-radius:10px;padding:10px 14px;margin-bottom:20px;
         ">
-          <span style="font-size:13px;color:var(--amber);font-weight:700">ðŸŽ‰ Waitlist perk:</span>
+          <span style="font-size:13px;color:var(--amber);font-weight:700">🎉 Waitlist perk:</span>
           <span style="font-size:13px;color:rgba(250,246,240,0.75)"> Accepted beta customers get 6 months free. On the waitlist? You'll get 20% off your first year.</span>
         </div>
 
         <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:var(--amber);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.75)">Live roast timer with milestone alarms</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:var(--amber);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.75)">Voice prompts & bean observation logging</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:var(--amber);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.75)">Green inventory & invoice management</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:var(--amber);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.75)">Pricing tool with overhead & labor tracking</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:var(--amber);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.75)">Works on mobile, tablet & desktop</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:var(--amber);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:var(--amber);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.75)">Training & expert modes</span>
           </div>
         </div>
@@ -708,23 +708,23 @@ setInterval(() => {
 
         <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px">
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.4)">Everything in Standard</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.4)">Automatic bean temp tracing from equipment</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.4)">Automatic air temp tracing from equipment</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.4)">Direct equipment integration</span>
           </div>
           <div style="display:flex;gap:10px;align-items:flex-start">
-            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">âœ“</span>
+            <span style="color:rgba(250,246,240,0.3);font-weight:700;margin-top:1px">✓</span>
             <span style="font-size:14px;color:rgba(250,246,240,0.4)">Advanced roast curve analytics</span>
           </div>
         </div>
@@ -734,7 +734,7 @@ setInterval(() => {
           border-radius:10px;padding:14px;text-align:center;
           font-size:13px;color:rgba(250,246,240,0.4);
         ">
-          ðŸ”§ Coming soon â€” beta customers notified first
+          🔧 Coming soon — beta customers notified first
         </div>
       </div>
 
@@ -742,9 +742,9 @@ setInterval(() => {
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════════════════════════════════════════ -->
 <!-- WAITLIST + QUESTIONNAIRE SECTION -->
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ══════════════════════════════════════════════ -->
 <hr class="divider">
 <section id="waitlist" style="padding:72px 24px;background:linear-gradient(180deg,transparent,rgba(200,147,42,0.04),transparent)">
   <div style="max-width:640px;margin:0 auto">
@@ -753,7 +753,7 @@ setInterval(() => {
       <span class="section-tag">Beta Application</span>
       <h2 class="section-title">Tell us about<br><em>your operation.</em></h2>
       <p class="section-body" style="margin:0 auto;text-align:center">
-        We're hand-selecting a limited group of beta roasters. Answer 8 quick questions and we'll reach out if it's a good fit â€” no commitment, no credit card.
+        We're hand-selecting a limited group of beta roasters. Answer 8 quick questions and we'll reach out if it's a good fit — no commitment, no credit card.
       </p>
     </div>
 
@@ -788,7 +788,7 @@ setInterval(() => {
             margin-top:12px;background:var(--amber);color:var(--espresso);
             border:none;border-radius:10px;padding:13px 28px;font-weight:700;font-size:15px;
             cursor:pointer;width:100%;
-          ">Continue â†’</button>
+          ">Continue →</button>
         </div>
       </div>
 
@@ -815,16 +815,16 @@ setInterval(() => {
           width:100%;background:var(--amber);color:var(--espresso);
           border:none;border-radius:10px;padding:16px;font-weight:700;font-size:16px;
           cursor:pointer;
-        ">ðŸ”¥ Submit Application</button>
+        ">🔥 Submit Application</button>
       </div>
 
       <!-- Thank you -->
       <div id="q-thanks" style="display:none;text-align:center;padding:20px 0">
-        <div style="font-size:48px;margin-bottom:16px">ðŸ”¥</div>
+        <div style="font-size:48px;margin-bottom:16px">🔥</div>
         <div style="font-family:'Playfair Display',serif;font-size:28px;color:var(--cream);margin-bottom:12px">You're on the list.</div>
         <div style="font-size:15px;color:rgba(250,246,240,0.5);line-height:1.65">
           Thanks for applying. We review every submission personally and will reach out to discuss if it's a good fit.<br><br>
-          Selected beta roasters get <strong style="color:var(--amber)">6 months free</strong> â€” we'll walk you through everything.
+          Selected beta roasters get <strong style="color:var(--amber)">6 months free</strong> — we'll walk you through everything.
         </div>
       </div>
     </div>
@@ -852,19 +852,19 @@ const QUESTIONS = [
     q: "What best describes your roasting setup?",
     hint: "This helps us understand where you're starting from.",
     type: "choice",
-    options: ["Sample roaster (under 1kg)", "Small production (1â€“15kg)", "Mid production (15â€“60kg)", "Large production (60kg+)"]
+    options: ["Sample roaster (under 1kg)", "Small production (1–15kg)", "Mid production (15–60kg)", "Large production (60kg+)"]
   },
   {
     q: "How many pounds of coffee do you roast annually?",
     hint: "Rough estimate is fine.",
     type: "choice",
-    options: ["Under 5,000 lbs", "5,000â€“25,000 lbs", "25,000â€“100,000 lbs", "Over 100,000 lbs"]
+    options: ["Under 5,000 lbs", "5,000–25,000 lbs", "25,000–100,000 lbs", "Over 100,000 lbs"]
   },
   {
     q: "How do you roast today?",
     hint: "We want to meet you where you are.",
     type: "choice",
-    options: ["Fully manual â€” by eye, ear, smell", "Manual with a timer or notepad", "Semi-automated with software", "Fully automated profiles"]
+    options: ["Fully manual — by eye, ear, smell", "Manual with a timer or notepad", "Semi-automated with software", "Fully automated profiles"]
   },
   {
     q: "Are you currently using any roast tracking tool?",
@@ -880,19 +880,19 @@ const QUESTIONS = [
   },
   {
     q: "Do you do any green coffee grading before roasting?",
-    hint: "Moisture, screen size, defect sorting â€” that kind of thing.",
+    hint: "Moisture, screen size, defect sorting — that kind of thing.",
     type: "choice",
-    options: ["Yes â€” full grading process", "Partial â€” some checks", "We rely on our broker's grading", "No green grading currently"]
+    options: ["Yes — full grading process", "Partial — some checks", "We rely on our broker's grading", "No green grading currently"]
   },
   {
     q: "How many people are involved in your roasting operation?",
     hint: "Helps us understand your team size.",
     type: "choice",
-    options: ["Just me", "2â€“3 people", "4â€“10 people", "10+ people"]
+    options: ["Just me", "2–3 people", "4–10 people", "10+ people"]
   },
   {
     q: "What's your biggest pain point right now?",
-    hint: "Be honest â€” this helps us build the right tool.",
+    hint: "Be honest — this helps us build the right tool.",
     type: "input",
     placeholder: "e.g. consistency between batches, training new staff, tracking costs..."
   },
@@ -1019,7 +1019,7 @@ async function submitFinal() {
     document.getElementById('q-final').style.display = 'none';
     document.getElementById('q-thanks').style.display = 'block';
   } catch(e) {
-    btn.textContent = 'ðŸ”¥ Submit Application';
+    btn.textContent = '🔥 Submit Application';
     btn.disabled = false;
     alert('Something went wrong. Please try again.');
   }
@@ -1038,5 +1038,3 @@ document.addEventListener('keydown', e => {
 
 </body>
 </html>
-
-
