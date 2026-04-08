@@ -294,6 +294,30 @@ footer a{color:var(--amber);text-decoration:none}
 </style>
 </head>
 <body>
+<script>
+(function(){
+  var p = new URLSearchParams(window.location.search);
+  var ref = p.get('ref');
+  if (ref) {
+    // Save cookie (90 days)
+    var d = new Date(); d.setTime(d.getTime() + 90*24*60*60*1000);
+    document.cookie = 'rf_ref=' + encodeURIComponent(ref) + ';expires=' + d.toUTCString() + ';path=/;SameSite=Lax';
+
+    // Log the visit (fire and forget)
+    try {
+      navigator.sendBeacon(
+        'https://fmcvxvguhjscvjbrlgsv.supabase.co/functions/v1/log-referral-visit',
+        JSON.stringify({ code: ref, page: window.location.pathname, ua: navigator.userAgent })
+      );
+    } catch(e) {}
+
+    // Clean URL
+    p.delete('ref');
+    var clean = window.location.pathname + (p.toString() ? '?' + p.toString() : '');
+    history.replaceState(null, '', clean);
+  }
+})();
+</script>
 
 <!-- NAV -->
 <nav>
